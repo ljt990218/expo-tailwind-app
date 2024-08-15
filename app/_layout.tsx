@@ -1,11 +1,11 @@
-import '../global.css';
+import '../global.css'
 
-import { Stack } from 'expo-router';
+import { Stack } from 'expo-router'
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
-};
+  initialRouteName: '(tabs)'
+}
 
 export default function RootLayout() {
   return (
@@ -14,10 +14,10 @@ export default function RootLayout() {
         name="(tabs)"
         options={{
           headerShown: false, // 显示头部
-          headerTitle: 'back', // 设置自定义标题
+          headerTitle: 'back' // 设置自定义标题
         }}
       />
       <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
     </Stack>
-  );
+  )
 }

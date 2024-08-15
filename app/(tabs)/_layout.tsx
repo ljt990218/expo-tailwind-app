@@ -1,13 +1,13 @@
-import { Link, Tabs } from 'expo-router';
+import { Link, Tabs } from 'expo-router'
 
-import { HeaderButton } from '../../components/HeaderButton';
-import { TabBarIcon } from '../../components/TabBarIcon';
+import { HeaderButton } from '../../components/HeaderButton'
+import { TabBarIcon } from '../../components/TabBarIcon'
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'black',
+        tabBarActiveTintColor: 'black'
       }}>
       <Tabs.Screen
         name="index"
@@ -18,16 +18,16 @@ export default function TabLayout() {
             <Link href="/modal" asChild>
               <HeaderButton />
             </Link>
-          ),
+          )
         }}
       />
       <Tabs.Screen
         name="two"
         options={{
           title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />
         }}
       />
     </Tabs>
-  );
+  )
 }
